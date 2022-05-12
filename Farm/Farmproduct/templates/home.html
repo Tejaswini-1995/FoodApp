@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guruvarya</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="home.html" class="logo"> <i class="fas fa-shopping-basket"></i> Guruvarya Farming Industry </a>
+
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="{% static 'app/about.html' %}">About</a>
+        <a href="{% static 'app/services.html' %}">Services</a>
+        <a href="{% static 'app/review.html' %}">Review</a>
+        <a href="{% static 'app/products.html' %}">Products</a>
+        <a href="{% static 'app/contact.html' %}">Contact</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="image/cart-1.jpg" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="image/cart-2.jpg" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <i class="fas fa-times"></i>
+            <img src="{% static 'app/image/cart-3.jpg' %}" alt="">
+            <div class="content">
+                <h3>organic food</h3>
+                <span class="quantity">1</span>
+                <span class="multiply">x</span>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <h3 class="total"> total : <span>56.97</span> </h3>
+        <a href="#" class="btn">checkout cart</a>
+    </div>
+
+    <form action="" class="login-form">
+        <h3>login form</h3>
+        <input type="email" placeholder="enter your email" class="box">
+        <input type="password" placeholder="enter your password" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+        </div>
+        <input type="submit" value="login now" class="btn">
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">create one</a></p>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+<section class="home">
+
+    <div class="slides-container">
+
+        <div class="slide active">
+            <div class="content">
+                <span>fresh and organic</span>
+                <h3>From Farmer to Your Home</h3>
+            </div>
+            <div class="image">
+                <img src="{% static 'app/image/Homepage1.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <span>fresh and organic</span>
+                <h3>From Farmer to Your Home</h3>
+            </div>
+            <div class="image">
+                <img src="{% static 'app/image/Homepage2.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <span>fresh and organic</span>
+                <h3>From Farmer to Your Home</h3>
+            </div>
+            <div class="image">
+                <img src="{% static 'app/image/home-img-3.png' %}" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+    <div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
+
+</section>
+
+<section class="banner-container">
+
+    <div class="banner">
+        <img src="{% static 'app/image/Homepage2.jpg' %}" alt="">
+        <div class="content">
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="{% static 'app/image/Homepage3.jpg' %}" alt="">
+        <div class="content">
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="{% static 'app/image/Homepage4.jpg' %}" alt="">
+        <div class="content">
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="home.html"> <i class="fas fa-arrow-right"></i> home</a>
+            <a href="{% static 'app/about.html' %}">About</a>
+            <a href="{% static 'app/services.html' %}">Services</a>
+            <a href="{% static 'app/review.html' %}">Review</a>
+            <a href="{% static 'app/products.html' %}">Blog</a>
+            <a href="{% static 'app/contact.html' %}">Contact</a>
+        </div>
+
+
+
+        <div class="box">
+            <a href="https://facebook.com/freewebsitecode/"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://freewebsitecode.com/"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos"> <i class="fab fa-youtube"></i> youtube </a>
+            <a href="https://freewebsitecode.com/"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="https://freewebsitecode.com/"> <i class="fab fa-linkedin"></i> linkedin </a>
+
+        </div>
+
+        <div class="box">
+            <h3>Whatsapp You Enquiry</h3>
+            <p>For Farmers</p>
+            <form action="">
+                <h3> 9146603392 </h3>
+            </form>
+            <p>For Customer</p>
+            <form action="">
+                <h3> 9146603392 </h3>
+            </form>
+            <img src="image/payment.png" class="payment" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="credit">created by <a href="https://freewebsitecode.com/"> AVANT </a> | all rights reserved!</section>
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom css file link  -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
